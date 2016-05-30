@@ -1,6 +1,25 @@
-
-from django.http import HttpResponse
-
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Hello, world. You're at biobitbot.")
+	context = {
+		'sitetitle':'BioBitBot',
+		'navlinks':[
+					],
+		'projectname':'BioBitBot',
+		'jumbohead':'Good Research Needs Good Analysis',
+		'leadtext':'Your data. Our bioinformatics.',
+		'leftsubs':[
+					('About','BioBitBot provides bioinformatics analysis for microbiome research. We use bleeding edge techniques to anlyse data and provide you with detailed, easy to understand, reports. We work with your group to give you an analysis that will stand up to review')
+					],
+		'rightsubs':[
+					('Microbiome', 'BioBitBot specializes in analyzing microbiomes.'),
+					('Fast Growing', 'BioBitBot is a young company but our technology is backed by research.'),
+					('Quick Analysis', 'Most analyses take less than 48 hours.'),
+					('Open Access', 'BioBitBot is committed to Open Access science.'),
+					],
+		'copyright' : 'pending'
+
+
+
+	}
+	return render(request, 'generic_jumbotron.html', context)

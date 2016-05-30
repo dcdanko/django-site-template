@@ -13,7 +13,7 @@ def index(request):
 					],
 		'rightsubs':[
 					('Microbiome', 'BioBitBot specializes in analyzing microbiomes.'),
-					('Fast Growing', 'BioBitBot is a young company but our technology is backed by research.'),
+					('Fast Growing', 'Our technology is backed by research. We stay up to date with nw techniques so you can focus on science.'),
 					('Quick Analysis', 'Most analyses take less than 48 hours.'),
 					('Open Access', 'BioBitBot is committed to Open Access science.'),
 					],

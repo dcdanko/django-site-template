@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> {{sitetitle}} </title>
+
+       
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	 <link rel="stylesheet" type="text/css" href="{% static 'jumbotron-narrow.css' %}" />
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        {% if navlinks.len > 0 %}
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            {% for navlink in navlinks %}
+            	<li role="presentation"><a href='{{navlink.1}}'>{{navlink.0}}</a></li>
+           	{%  endfor %}
+          </ul>
+        {% endif %}
+        </nav>
+        <h3 class="text-muted">{{projectname}}</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>{{jumbohead}}</h1>
+        <p class="lead">{{leadtext}}</p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+        	{% for lsub in leftsubs %}
+	          <h4>{{lsub.0}}</h4>
+	          <p>{{lsub.1}}</p>
+	        {% endfor %}
+
+        </div>
+
+        <div class="col-lg-6">
+        	{% for rsub in rightsubs %}
+	          <h4>{{rsub.0}}</h4>
+	          <p>{{rsub.1}}</p>
+	        {% endfor %}
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; {{copyright}}</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

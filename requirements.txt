@@ -20,3 +20,4 @@ whitenoise==3.2
 wsgiref==0.1.2
 xattr==0.6.4
 zope.interface==4.1.1
+psycopg2==2.6.1

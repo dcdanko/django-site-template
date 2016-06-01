@@ -68,18 +68,13 @@ visited{
 	background:#05821D;
 	border-color: transparent;
 	background-size: 100% 100%;
-	color:#D8D8D8;
+	color: #F9F9F9;
 }
 
 .blue-box {
 	background:#1B759C;
 	border-color: transparent;
 	background-size: 100% 100%;
-}
-
-
-.light-text{
-	color:#DDDCC5;
 }
 
 .full-height{
@@ -97,7 +92,12 @@ visited{
 .tall{
 	height:54px;
 	font-size:24pt;
+	color: #222;
 }
 .rest-width{
 	width:30%;
+}
+
+.light-text{
+	color: #F9F9F9;
 }

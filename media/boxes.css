@@ -1,0 +1,103 @@
+
+body{
+	background:#FFFFFF;
+	text-align: left;
+	margin: 0 auto;
+	padding: 15px;
+
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   color: #333;
+/*   color: #1D2326;
+*//*   color: #6A6A61;*/
+
+}
+
+link{
+	color: #1B759C;
+}
+
+visited{
+	color: #1B759C;
+}
+
+.container{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.row-wrap{
+	padding: 0px;
+	margin: 0px; 
+}
+
+.col-wrap{
+	padding: 0px;
+	margin: 0px; 
+}
+
+.box{
+	border-radius: 10px;
+}
+
+.padded{
+	margin: 5px;
+	padding: 10px;
+}
+.light-box{
+	/*background:#CF0F2D;*/
+	background:#F7F7F7;
+	background-origin: content-box;
+	color: #333;
+}
+
+.grey-box{
+	background:#8A8A8A;
+	background-origin: content-box;
+}
+
+.red-box{
+	background:#CF0F2D;
+	border-color: transparent;
+	background-size: 100% 100%;
+}
+
+.green-box {
+	background:#05821D;
+	border-color: transparent;
+	background-size: 100% 100%;
+	color: #F9F9F9;
+}
+
+.blue-box {
+	background:#1B759C;
+	border-color: transparent;
+	background-size: 100% 100%;
+}
+
+.full-height{
+	height:9999px;
+}
+
+.full-width{
+	width:100%;
+}
+
+.most-width{
+	width:69%;
+}
+
+.tall{
+	height:54px;
+	font-size:24pt;
+	color: #222;
+}
+.rest-width{
+	width:30%;
+}
+
+.light-text{
+	color: #F9F9F9;
+}

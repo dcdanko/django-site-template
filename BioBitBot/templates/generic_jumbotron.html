@@ -43,6 +43,14 @@
         {% endfor %}
       </br>
         <h2>{{leadtext}}</h2>
+              <div class="row marketing"> 
+    </br>
+      <form method="post" action="postemail" method='post'>
+          {% csrf_token %}
+            <input type="email" name="iemail" placeholder="david@biobitbot.com" class="most-width tall">
+            <input type="submit" value="Get News" class="box green-box rest-width tall">
+      </form>
+    </div>
       </div>
 
       <div class="row marketing">
@@ -54,15 +62,7 @@
         <hr>
         {% endfor %}
       </div>
-      <div class="row marketing"> 
-      <h3> Want to learn more? Sign up for news! </h3>
-    </br>
-      <form method="post" action="postemail" method='post'>
-          {% csrf_token %}
-            <input type="email" name="iemail" placeholder="david@biobitbot.com" class="most-width tall">
-            <input type="submit" class="box green-box rest-width tall">
-      </form>
-    </div>
+
     </div>
 
       <footer class="footer">

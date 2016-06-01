@@ -1,1 +1,1 @@
-web: gunicorn biobitbot.wsgi --log-file -
+web: gunicorn BioBitBot.wsgi --log-file -

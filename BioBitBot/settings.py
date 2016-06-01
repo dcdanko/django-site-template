@@ -58,7 +58,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-                '/Users/dcdanko/biobitbot/templates',
+                    os.path.join(BASE_DIR, 'templates'),
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -137,7 +137,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(BASE_DIR, 'media'),
 )
 
 # Simplified static file serving.

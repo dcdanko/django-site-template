@@ -39,4 +39,29 @@ def index(request):
 
 
 	}
-	return render(request, 'generic_jumbotron.html', context)
+	return render(request, 'index.html', context)
+
+
+def tech(request):
+	context = {}
+	return render(request,'full-width.html',context)
+
+def openAccess(request):
+	context = {}
+	return render(request,'full-width.html',context)
+
+def team(request):
+	context = {}
+	return render(request,'portfolio-2-col.html',context)
+
+def blog(request):
+	context = {}
+	return render(request,'blog-home-2.html',context)
+
+def contact(request):
+	context = {}
+	return render(request,'contact.html',context)
+
+def faq(request):
+	context = {}
+	return render(request,'faq.html',context)

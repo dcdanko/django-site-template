@@ -98,14 +98,6 @@ footer {
     width: 100%;
 }
 
-.fit-width-image {
-    width:70%;
-    height:70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;s
-}
-
 .equal, .equal > div[class*='col-'] {  
     display: -webkit-flex;
     display: flex;

@@ -9,12 +9,12 @@ def index(request):
 	info = info[0]
 	blurbs = Blurb.objects.all()
 	triblurbs = makeTriples(blurbs)
-	banners = Banner.objects.all()
+	banner = Banner.objects.all()[0]
 
 	context = {	
 		'navbartitle'			:"BioBitBot",
 		'sitetitle'				:"BioBitBot",		
-		'banners'				: banners,		
+		'banner'				: banner,		
 		'welcomemsg'			: info.tagline,	
 		'blurbs'				: triblurbs,
 		'example_email'			: info.example_email,

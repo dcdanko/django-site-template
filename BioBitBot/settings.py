@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
    'django.contrib.staticfiles',
     'emailinfopage',
+    'blog',
 ]
 
 MIDDLEWARE_CLASSES = [

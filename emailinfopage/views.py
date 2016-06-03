@@ -75,25 +75,6 @@ def team(request):
 	}
 	return render(request,'portfolio-2-col.html',context)
 
-def blog(request):
-	post = {
-		'date':'Jun 3, 2016',
-		'title':'A post',
-		'author':'David',
-		'content':'Coming soon!',
-		'url':'',
-		'image':'http://www.biovisible.com/FISH%20button.png',
-	}
-	context = {
-		'heading':'The Blog',
-		'subheading':'',
-		'title':'Blog',
-		'copyright':'Pending',
-		'blogposts':[post],
-		'navbartitle'			:"BioBitBot",
-	}
-	return render(request,'blog-home-2.html',context)
-
 def contact(request):
 	context = {
 		'heading':'Contact us.',

@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^blog$', views.blog, name='blog'),
     url(r'^contact$', views.contact, name='contact'),
     url(r'^faq$', views.faq, name='faq'),
+    url(r'^service$', views.service, name='service'),
 ]

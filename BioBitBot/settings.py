@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'emailinfopage',
     'blog',
     'infopages',
+    'homepage',
 ]
 
 MIDDLEWARE_CLASSES = [

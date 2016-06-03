@@ -17,11 +17,11 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            {% for image in carouselimages %}
+            {% for banner in banners %}
                 <div class="item active">
-                    <div class="fill" style="background-image:url({{image.url}});"></div>
+                    <div class="fill" style="background-image:url({{banner.image}});"></div>
                     <div class="carousel-caption">
-                        <h2>{{image.caption}}</h2>
+                        <h2>{{banner.title}}</h2>
                     </div>
                 </div>
             {% endfor %}
@@ -46,63 +46,36 @@
                     {{welcomemsg}}
                 </h1>
             </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>{{paneltitleone}}</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>
-                        {{panelbodyone}}
-                        </p>
-                        <a href="#" class="btn btn-default">{{panelbuttonone}}</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>{{paneltitletwo}}</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>
-                        {{panelbodytwo}}
-                        </p>
-                        <a href="#" class="btn btn-default">{{panelbuttontwo}}</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>{{paneltitlethree}}</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>
-                        {{panelbodythree}}
-                        </p>
-                        <a href="#" class="btn btn-default">{{panelbuttonthree}}</a>
-                    </div>
-                </div>
-            </div>
         </div>
-        <!-- /.row -->
-
+        {% for blurbrow in blurbs %}
+            <div class="row">
+                {% for blurb in blurbrow %}
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4><i class="fa fa-fw fa-check"></i>{{blurb.title}}</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                {{blurb.content}}
+                                </p>
+                                <a href="{{blurb.link}}" class="btn btn-default">{{blurb.link_text}}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
 
 
         <hr>
 
         <!-- Call to Action Section -->
-        <div class="well">
-            <div class="row">
-                <div class="col-md-8">
-                    <p>{{calltoaction}}</p>
-                </div>
-                <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="#">{{calltoactionbutton}}</a>
-                </div>
-            </div>
-        </div>
+        <form method="post" action="postemail" method='post'>
+          {% csrf_token %}
+            <input type="email" name="iemail" placeholder="{{example_email}}" class="most-width tall box">
+            <input type="submit" value="{{email_button}}" class="box rest-width tall green-box light-text">
+        </form>
 
         <hr>
 
@@ -110,7 +83,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; {{copyright}}</p>
                 </div>
             </div>
         </footer>

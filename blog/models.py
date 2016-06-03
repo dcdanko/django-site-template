@@ -8,4 +8,4 @@ class BlogPost(models.Model):
 	author = models.CharField(max_length=256)
 	pub_date =  models.DateTimeField(auto_now=True)
 	content = models.TextField()
-	image = models.URLField()
+	image = models.CharField(max_length=256)

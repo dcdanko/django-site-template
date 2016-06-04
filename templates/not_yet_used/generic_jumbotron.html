@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+{% load static from staticfiles %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> {{sitetitle}} </title>
+
+  <link rel="icon" href="/static/favicon-16x16.png">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link href="{% static "jumbotron-narrow.css" %}" rel="stylesheet">
+  <link href="{% static "boxes.css" %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        {% if navlinks.len > 0 %}
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            {% for navlink in navlinks %}
+            	<li role="presentation"><a href='{{navlink.1}}'>{{navlink.0}}</a></li>
+           	{%  endfor %}
+          </ul>
+        {% endif %}
+        </nav>
+        <h3 class="text-muted">{{projectname}}</h3>
+      </div>
+
+      <div class="jumbotron" >
+        {% for li in jumbohead %}
+          <h1>{{li}}</h1>
+        {% endfor %}
+      </br>
+        <h2>{{leadtext}}</h2>
+              <div class="row marketing"> 
+    </br>
+      <form method="post" action="postemail" method='post'>
+          {% csrf_token %}
+            <input type="email" name="iemail" placeholder="david@biobitbot.com" class="most-width tall box">
+            <input type="submit" value="Get News" class="box rest-width tall green-box light-text">
+      </form>
+    </div>
+      </div>
+
+      <div class="row marketing">
+        {% for section in sections %}
+        	{% for sub in section %}
+              <h4>{{sub.0}}</h4>
+              <p>{{sub.1}}</p>
+	        {% endfor %}
+        <hr>
+        {% endfor %}
+      </div>
+
+    </div>
+
+      <footer class="footer">
+        <p>&copy; {{copyright}}</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

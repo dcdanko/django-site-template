@@ -1,0 +1,51 @@
+{% include "header.html" %}
+
+
+{% load static from staticfiles %}
+
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        {% include "subpage-heading.html" %}
+
+        <!-- Projects Row -->
+        {% for pair in itempairs%}
+            
+            <div class="row">
+                {% for item in pair %}
+                    <div class="col-md-6 img-portfolio">
+                        <a href="portfolio-item.html">
+                            <img class="img-responsive img-hover" src="{{item.image}}" alt="">
+                        </a>
+                        <h3>
+                            <a href="portfolio-item.html">{{item.title}}</a>
+                        </h3>
+                        <p>{{item.content}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- /.row -->
+        {% endfor %}
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; {{copyright}}</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    {% include "footer.html" %}
+
+</body>
+
+</html>

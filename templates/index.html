@@ -1,0 +1,82 @@
+{% include "header.html" %}
+
+
+{% load static from staticfiles %}
+
+
+<body>
+    <img src="{{banner.image}}" class="banner-image">
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    {{welcomemsg}}
+                </h1>
+            </div>
+        </div>
+        {% for blurbrow in blurbs %}
+            <div class="row equal">
+                {% for blurb in blurbrow %}
+                    <div class="col-md-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4><i class="fa fa-fw fa-check"></i>{{blurb.title}}</h4>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                {{blurb.content}}
+                                </p>
+                                <a href="{{blurb.link}}" class="btn btn-primary">{{blurb.link_text}}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% if blurbrow|length <= 2 %}
+                    <div class="col-md-4">
+                        <img src="/static/img/germs_round_icons-22.png" class="fit-width-image">
+                    </div>
+                {% endif %}
+                {% if blurbrow|length == 1 %}
+                    <div class="col-md-4">
+                        <img src="/static/img/germs_round_icons-03.png" class="fit-width-image">
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+
+        <hr>
+
+        <!-- Call to Action Section -->
+
+        <div class="input-group">
+            <input type="email" placeholder="{{example_email}}" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">{{email_button}}</button>
+            </span>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; {{copyright}}</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    {% include "footer.html" %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+
+{% load static from staticfiles %}
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        {% include "subpage-heading.html" %}
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <p>{{content}}</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>&copy; {{copyright}}</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    {% include "footer.html" %}
+
+</body>
+
+</html>

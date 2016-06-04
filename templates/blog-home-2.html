@@ -1,0 +1,58 @@
+{% include "header.html" %}
+
+
+{% load static from staticfiles %}
+
+
+<body>
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        {% include "subpage-heading.html" %}
+
+        {% for post in blogposts %}
+            <!-- Blog Post Row -->
+            <div class="row">
+                <div class="col-md-1 text-center">
+                    
+                    <p>{{post.date}}</p>
+                </div>
+                <div class="col-md-5">
+                    <a href="blog-post.html">
+                        <img class="img-responsive img-hover" src="{{post.image}}" alt="">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <h3>
+                        <a href="blog-post.html">{{post.title}}</a>
+                    </h3>
+                    <p>by <a href="#">{{post.author}}</a>
+                    </p>
+                    <p>{{post.content}}</p>
+                    <a class="btn btn-primary" href="detail/{{post.id}}">Read More <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <!-- /.row -->
+            <hr>
+        {% endfor %}
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; {{copyright}}</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    {% include "footer.html" %}
+
+</body>
+
+</html>

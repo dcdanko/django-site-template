@@ -69,8 +69,7 @@ Now click on '+ add' next to banner line.
 - Fill in the image field with the image url of your choice.
 - Fill in the title field with anything - it doesn't show up yet.
 - Hit save.
-- 
-Click view site.
+- Click view site.
 
 You should now be able to see your homepage! You'll need to edit the info for all the other pages too or you'll get 404 errors for those as well.
 

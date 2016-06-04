@@ -1,1 +1,1 @@
-web: gunicorn BioBitBot.wsgi --log-file -
+web: gunicorn template_site_name.wsgi --log-file -

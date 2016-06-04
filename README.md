@@ -1,14 +1,22 @@
-# template_site_name
+# Django Template Site 
+
 A fully functional django based website. Heroku ready.
 
+To see the site in action go to:
+https://stormy-beach-15517.herokuapp.com/
+
 This repo is meant to be a fully functional website suitable for an academic project, small business or similar.
+
 --
+
 I've spent a while now learning build websites- It's been a bit of a frustrating process. Webcoding relies on a lot of structure and a lot of conventions that experience web programmers can take for granted. For an experienced web programmers it's nice not to have to read tons of basic documentation everytime you use an app. For a novice programmer it can be extremely confusing not to understand what goes into making a website.
 
 If your goal is to learn to build websites well this may not be the place for you. You should go read about how the web works, what frameworks can do, the difference between front-end and back-end, etc. That research will serve you well when you try to make your own, more complicated, websites.
 
 If you're like me though you don't particularly care about building websites. You just want something that will look decent and serve as a public face for your project. You're in the right place. Let's get started.
+
 --
+
 #Rule Number One#
 
 If you have a question about how something works, what something is, or how to make a change you need to ask.
@@ -16,8 +24,10 @@ If you have a question about how something works, what something is, or how to m
 Programming is easier when we work as a team. So if there's something you're not getting make an issue and let the community help you. Asking questions will also help me to improve documentation- as it is this is pretty minimal.
 
 Conversely, if you're an experienced web programmer and you have a suggestion don't hesitate. As I said above I'm far from being an expert. I'd like this template site to be as good as possible but I can't follow best practices that i don't know.
+
 --
-Set up the website
+
+##Set up the website
 - Install Django
 - Install the heroku toolbelt (and make a heroku account)
 - clone the repo
@@ -44,7 +54,7 @@ We need to migrate our tables and register an admin account
 - `heroku run python manage.py migrate`
 - `heroku run python manage.py createsuperuser`
 
-Now we're ready to go!
+##Now we're ready to go!
 - `heroku open` you should now be getting a 404 error. If you get anything else make an issue.
 - add '/admin' to the end of you url
 - log in with the superuser accoutn you just made
@@ -57,7 +67,8 @@ For example click the '+ add' button on the 'HomeInfo' line. Fill in the fields 
 You should now be able to see your homepage! You'll need to edit the info for all the other pages too or you'll get 404 errors for those as well.
 
 --
-Acknowledgments
+
+##Acknowledgments
 
 The front end is based on the modern-business bootstrap template using the sandstone bootstrap theme.
 

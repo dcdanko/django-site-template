@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -61,7 +60,5 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
-=======
-*.pyc
+
 microbematic/settings_secret.py
->>>>>>> develop

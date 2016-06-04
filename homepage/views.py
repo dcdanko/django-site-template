@@ -11,9 +11,7 @@ def index(request):
 	triblurbs = makeTriples(blurbs)
 	banner = Banner.objects.all()[0]
 
-	context = {	
-		'navbartitle'			:"BioBitBot",
-		'sitetitle'				:"BioBitBot",		
+	context = {		
 		'banner'				: banner,		
 		'welcomemsg'			: info.tagline,	
 		'blurbs'				: triblurbs,

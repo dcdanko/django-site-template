@@ -9,7 +9,6 @@ def blogIndex(request):
 		'title':'Blog',
 		'copyright':'Pending',
 		'blogposts':blogposts,
-		'navbartitle'			:"BioBitBot",
 	}
 	return render(request,'blog-home-2.html',context)
 

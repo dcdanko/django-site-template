@@ -14,7 +14,6 @@ def tech(request):
 		'subheading':info.subheading,
 		'title':info.title,
 		'content':info.content,
-		'navbartitle':"BioBitBot",
 		'copyright':'Pending',
 
 	}
@@ -31,7 +30,6 @@ def openAccess(request):
 		'subheading':info.subheading,
 		'title':info.title,
 		'content':info.content,
-		'navbartitle':"BioBitBot",
 		'copyright':'Pending',
 
 	}
@@ -52,7 +50,6 @@ def team(request):
 		'heading':info.heading,
 		'subheading':info.subheading,
 		'title':info.title,
-		'navbartitle':"BioBitBot",
 		'copyright':'Pending',
 
 	}
@@ -67,7 +64,6 @@ def contact(request):
 		'heading':info.heading,
 		'subheading':info.subheading,
 		'title':info.title,
-		'navbartitle':"BioBitBot",
 		'copyright':'Pending',
 		'phone':info.phone,
 		'email':info.email,
@@ -88,7 +84,6 @@ def faq(request):
 		'title':info.title,
 		'questions':questions,
 		'copyright':'Pending',
-		'navbartitle':"BioBitBot",
 	}
 	return render(request,'faq.html',context)
 
@@ -103,7 +98,6 @@ def service(request):
 		'subheading':info.subheading,
 		'title':info.title,
 		'content':info.content,
-		'navbartitle':"BioBitBot",
 		'copyright':'Pending',
 
 	}

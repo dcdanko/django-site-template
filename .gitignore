@@ -61,4 +61,4 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 
-microbematic/settings_secret.py
+template_site_name/settings_secret.py

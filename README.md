@@ -62,7 +62,15 @@ We need to migrate our tables and register an admin account
 
 Now you need to provide info about all of your pages. This site is set up to use the Django Admin as a very simple Content Management Service.
 
-For example click the '+ add' button on the 'HomeInfo' line. Fill in the fields and then click view site.
+For example click the '+ add' button on the 'HomeInfo' line. 
+- Fill in the fields. 
+- Hit save.
+Now click on '+ add' next to banner line.
+- Fill in the image field with the image url of your choice.
+- Fill in the title field with anything - it doesn't show up yet.
+- Hit save.
+- 
+Click view site.
 
 You should now be able to see your homepage! You'll need to edit the info for all the other pages too or you'll get 404 errors for those as well.
 
